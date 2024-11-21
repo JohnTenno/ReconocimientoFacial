@@ -1,10 +1,11 @@
-const MODEL_URL = '/ReconocimientoFacial/public/models';
+const MODEL_URL = '/JohnTenno/models';
 
 (async () => {
     await faceapi.loadSsdMobilenetv1Model(MODEL_URL)
     await faceapi.loadFaceLandmarkModel(MODEL_URL)
     await faceapi.loadFaceRecognitionModel(MODEL_URL)
     await faceapi.loadFaceExpressionModel(MODEL_URL)
+    console.log(MODEL_URL);
 
     const image = document.getElementById('image');
     const canvas = document.getElementById('canvas');

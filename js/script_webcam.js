@@ -7,7 +7,8 @@ const canvas = document.getElementById('overlay');
 })();
 
 async function onPlay() {
-    const MODEL_URL = '/ReconocimientoFacial/public/models';
+    const MODEL_URL = '/JohnTenno/public/models';
+    
 
     await faceapi.loadSsdMobilenetv1Model(MODEL_URL)
     await faceapi.loadFaceLandmarkModel(MODEL_URL)
