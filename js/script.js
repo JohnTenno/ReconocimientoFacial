@@ -1,4 +1,4 @@
-const MODEL_URL = '/public/models';
+const MODEL_URL = '/ReconocimientoFacial/public/models';
 
 (async () => {
     await faceapi.loadSsdMobilenetv1Model(MODEL_URL)

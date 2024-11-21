@@ -7,38 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src="./public/js/face-api.min.js"></script>
+    <script src="/ReconocimientoFacial/public/js/face-api.min.js"></script>
 
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        body {
-            text-align: center;
-            background: #f2f6f8;
-        }
-
-        img {
+        video {
             position: absolute;
             z-index: 1;
         }
 
-        #container {
-            display: inline-block;
-            width: 612px;
-            height: 612px;
-            margin: 0 auto;
-            background: black;
-            position: relative;
-            border: 5px solid black;
-            border-radius: 10px;
-            box-shadow: 0 5px 50px #333
-        }
-
-        #canvas {
+        canvas {
             position: relative;
             z-index: 20;
         }
@@ -46,13 +29,12 @@
 </head>
 
 <body>
-
-    <div id="container">
-        <img src="./public/images/image3.jpg" id="image">
-        <canvas id="canvas" width="612" height="612"></canvas>
+    <div style="position: relative">
+        <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
+        <canvas id="overlay">
     </div>
 
-    <script src="./public/js/script.js" type="module"></script>
+    <script src="/ReconocimientoFacial/public/js/script_webcam.js"></script>
 </body>
 
 </html>
